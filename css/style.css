@@ -9,6 +9,8 @@
   --nav-footer-color: #ffffff99;
   --black-color: #000;
   --indent: 30px;
+  --background-icon-button: #f5f4fa;
+  --icon-color: #AFB1B8;
 }
 h1,
 h2,
@@ -82,21 +84,18 @@ body {
 .header-container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .header {
   border-bottom: 1px solid #ececec;
 }
 .navigation {
   display: flex;
-  margin-right: auto;
   align-items: center;
 }
 .menu {
   display: flex;
-  align-items: center;
-}
-.contacts {
-  display: flex;
+  justify-content: center;
 }
 .menu-link,
 .cont-link {
@@ -105,6 +104,11 @@ body {
 }
 .nav-menu:not(:last-child) {
   margin-right: 50px;
+}
+.menu-link:hover,
+.menu-link:focus {
+  color: var(--accent-color);
+  outline: none;
 }
 .logo {
   font-family: var(--secondary-font);
@@ -120,10 +124,13 @@ body {
 .logo-header:hover,
 .logo-header:focus {
   color: var(--accent-color);
+  outline: none;
 }
 .logo:hover,
 .logo:focus {
   color: var(--accent-color);
+  outline: none;
+}
 }
 .menu,
 .cont-link {
@@ -131,29 +138,39 @@ body {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-}
-.nav:hover,
-.nav:focus {
-  color: var(--accent-color);
-}
-.cont-link {
+  
   color: var(--secondary-color);
 }
-.tel-cont-link {
-  margin-left: 50px;
+.contacts {
+  display: flex;
+  justify-content: center;
 }
 .contact-blok {
   display: flex;
   align-items: center;
-}
-.icon-box {
-  margin-right: 10px;
   fill: var(--secondary-color);
 }
-.icon-box:hover,
-.icon-box:focus {
+.contact-blok:not(:first-child) {
+  margin-left: var(--indent);
+}
+.cont-link {
+  display: flex;
+  align-items: center;
+}
+.contact-icon {
+  align-items: center;
+  margin-right: 10px;
+}
+.cont-link:hover,
+.cont-link:focus {
+  outline: none;
+  color: var(--accent-color);
+}
+.cont-link:hover .contact-icon,
+.cont-link:focus .contact-icon{
   fill: var(--accent-color);
 }
+
 /* ===== end header =====*/
 /* ======== hero ========*/
 .hero {
@@ -165,7 +182,7 @@ body {
     url(../images/hero.jpg);
   background-repeat: no-repeat;
   max-width: 1600px auto;
-  background-position: 50% 50%;
+  background-position: center;
 }
 .hero-title {
   font-weight: 900;
@@ -211,6 +228,7 @@ body {
 .advant-title {
   font-weight: 700;
   line-height: 1.14;
+  margin-top: var(--indent);
   text-transform: uppercase;
 }
 .text {
@@ -219,13 +237,14 @@ body {
   display: block;
   margin-top: 10px;
 }
-.buttom-menu {
-  width: 270px;
+.icon-blok {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 120px;
-  margin-bottom: var(--indent);
+  border: 1px solid var(--background-icon-button);
   border-radius: 4px;
-  border: transparent;
-  padding: 0;
+  background-color: var(--background-icon-button);
 }
 
 /* ===== end advantages ===== */
@@ -251,7 +270,7 @@ body {
 /* ======== our team ======== */
 
 .team {
-  background-color: #f5f4fa;
+  background-color: var(--background-icon-button);
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -271,13 +290,15 @@ body {
 .social-list-link:hover,
 .social-list-link:focus {
   background-color: var(--accent-color);
+  outline: none;
 }
 .social-list-icon {
-  fill: #afb1b8;
+  fill: var(--icon-color);
 }
 .social-list-link:hover .social-list-icon,
 .social-list-link:focus .social-list-icon {
   fill: var(--white-color);
+  outline: none;
 }
 .social-list-link {
   display: flex;
@@ -289,10 +310,10 @@ body {
   justify-content: center;
 }
 .staff {
-  flex-basis: calc(100% / 4 -30px);
+  flex-basis: calc(100% / 4 - var(--indent));
   margin-right: var(--indent);
   margin-bottom: var(--indent);
-  background: #ffffff;
+  background: var(--white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -319,36 +340,32 @@ body {
 /* ===== our clients ===== */
 .clients-box {
   display: flex;
-  flex-wrap: wrap;
-  margin-right: calc(-1 * var(--indent));
-  margin-bottom: calc(-1 * var(--indent));
+  justify-content: space-between;  
 }
 .clients-title {
   text-align: center;
   margin-bottom: 50px;
 }
-
-.clients-list-link {
+.client-link {
+  display: flex;
   width: 170px;
   height: 92px;
-  padding: 16px 32px;
-  fill: #afb1b8;
-  border: 1px solid #afb1b8;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--icon-color);
   border-radius: 4px;
-  flex-basis: calc(100% / 6 - var(--indent));
-  margin-right: var(--indent);
-  margin-bottom: var(--indent);
-  display: flex;
-  flex-wrap: wrap;
 }
-.clients-list-icon:hover,
-.clients-list-icon:focus {
-  fill: var(--accent-color);
-  border: var(--accent-color);
+.client-logo {
+  fill: var(--icon-color);
 }
-.clients-list-link:hover,
-.clients-list-link:focus {
+.client-link:hover,
+.client-link:focus {
   border-color: var(--accent-color);
+  outline: none;
+}
+.client-link:hover .client-logo,
+.client-link:focus .client-logo {
+  fill: var(--accent-color);
 }
 
 /* ===== end our clients ===== */
@@ -368,6 +385,7 @@ body {
 .logo-footer:hover,
 .logo-footer:focus {
   color: var(--accent-color);
+  outline: none;
 }
 .address-link,
 .mail-link,
@@ -386,6 +404,7 @@ body {
 }
 .footer-blok {
   display: flex;
+  align-items: baseline;
 }
 .footer-social-link {
   margin-left: 70px;
@@ -399,7 +418,6 @@ body {
   color: var(--white-color);
   margin-bottom: 20px;
   fill: var(--accent-color);
-  margin-top: 12px;
 }
 .footer-social-list-item:not(:first-child) {
   margin-left: 10px;
@@ -431,7 +449,7 @@ body {
   color: var(--body-color);
   padding: 8px 22px;
   border-radius: 4px;
-  background: #f5f4fa;
+  background: var(--background-icon-button);
   border: transparent;
 }
 .button-blok:not(:last-child) {
@@ -443,6 +461,7 @@ body {
   color: var(--white-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+  outline: none;
 }
 .project-lists {
   display: flex;
@@ -451,14 +470,16 @@ body {
   margin-bottom: calc(-1 * var(--indent));
 }
 .project-blok {
+  display: flex;
   flex-basis: calc(100% / 3 - var(--indent));
   margin-right: var(--indent);
   margin-bottom: var(--indent);
 }
-.project-blok:hover,
-.project-blok:focus {
+.project-link:hover,
+.project-link:focus {
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0 4px 4px rgba(0, 0, 0, 0.06),
     0 1px 1px rgba(0, 0, 0, 0.12);
+  outline: none;
 }
 .bord {
   padding: 20px 24px;
