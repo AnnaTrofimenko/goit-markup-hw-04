@@ -10,7 +10,7 @@
   --black-color: #000;
   --indent: 30px;
   --background-icon-button: #f5f4fa;
-  --icon-color: #AFB1B8;
+  --icon-color: #afb1b8;
 }
 h1,
 h2,
@@ -108,7 +108,6 @@ body {
 .menu-link:hover,
 .menu-link:focus {
   color: var(--accent-color);
-  outline: none;
 }
 .logo {
   font-family: var(--secondary-font);
@@ -124,21 +123,19 @@ body {
 .logo-header:hover,
 .logo-header:focus {
   color: var(--accent-color);
-  outline: none;
 }
 .logo:hover,
 .logo:focus {
   color: var(--accent-color);
-  outline: none;
 }
-}
+
 .menu,
 .cont-link {
   font-family: var(--main-font);
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  
+
   color: var(--secondary-color);
 }
 .contacts {
@@ -163,11 +160,10 @@ body {
 }
 .cont-link:hover,
 .cont-link:focus {
-  outline: none;
   color: var(--accent-color);
 }
 .cont-link:hover .contact-icon,
-.cont-link:focus .contact-icon{
+.cont-link:focus .contact-icon {
   fill: var(--accent-color);
 }
 
@@ -181,8 +177,10 @@ body {
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/hero.jpg);
   background-repeat: no-repeat;
-  max-width: 1600px auto;
+  max-width: 1600px;
+  margin: auto;
   background-position: center;
+  background-size: cover;
 }
 .hero-title {
   font-weight: 900;
@@ -199,8 +197,6 @@ body {
   font-size: 16px;
   line-height: 1.88;
   display: flex;
-  align-items: center;
-  text-align: center;
   letter-spacing: 0.06em;
   color: var(--white-color);
   background-color: var(--accent-color);
@@ -290,7 +286,6 @@ body {
 .social-list-link:hover,
 .social-list-link:focus {
   background-color: var(--accent-color);
-  outline: none;
 }
 .social-list-icon {
   fill: var(--icon-color);
@@ -298,7 +293,6 @@ body {
 .social-list-link:hover .social-list-icon,
 .social-list-link:focus .social-list-icon {
   fill: var(--white-color);
-  outline: none;
 }
 .social-list-link {
   display: flex;
@@ -340,7 +334,7 @@ body {
 /* ===== our clients ===== */
 .clients-box {
   display: flex;
-  justify-content: space-between;  
+  justify-content: space-between;
 }
 .clients-title {
   text-align: center;
@@ -361,7 +355,6 @@ body {
 .client-link:hover,
 .client-link:focus {
   border-color: var(--accent-color);
-  outline: none;
 }
 .client-link:hover .client-logo,
 .client-link:focus .client-logo {
@@ -385,7 +378,6 @@ body {
 .logo-footer:hover,
 .logo-footer:focus {
   color: var(--accent-color);
-  outline: none;
 }
 .address-link,
 .mail-link,
@@ -461,7 +453,6 @@ body {
   color: var(--white-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  outline: none;
 }
 .project-lists {
   display: flex;
@@ -479,7 +470,6 @@ body {
 .project-link:focus {
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0 4px 4px rgba(0, 0, 0, 0.06),
     0 1px 1px rgba(0, 0, 0, 0.12);
-  outline: none;
 }
 .bord {
   padding: 20px 24px;
